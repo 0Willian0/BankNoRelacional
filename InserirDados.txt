@@ -1,0 +1,32 @@
+use wm
+db.estados.insert({nome:"Acre", sigla: "AC, regiao: "Norte"})
+show collections
+
+db.estados.save({nome:"Alagoas", sigla:"AL", regiao:"Nordeste", populacao:33220000})
+db.estados.find()
+
+db.estados.find().pretty()
+
+db.estados.insert({nome:"Rio de Janeiro", sigla:"RJ", regiao:"Sudeste",
+cidades:[{nome:"Niteroi", area:133.9, populacao:487562}]})
+
+db.help
+
+db.estados.insert({nome:"Rio de Janeiro", sigla:"RJ", regiao:"Sudeste",
+cidades:[{
+    _id: ObjectId(), 
+    nome:"Campinas", 
+    area: 795.7, 
+    prefeito:"Jonas Donizette", 
+    populacao: 1081000
+    },{
+        _id: ObjectId(), 
+        nome:"Garulhos", 
+        populacao: 1325000
+    },{
+        _id: ObjectId(), 
+        nome:"Sorocaba",
+         distanciaCaputal: 87, 
+         populacao:644919
+    }]
+})
